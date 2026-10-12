@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact · Liberty Fitness Aumale</title>
+<meta name="description" content="Adresse, horaires, téléphone et formulaire de séance d’essai gratuite.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900;1,62..125,400..900&family=Barlow:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="bandeau" class="bandeau" role="status" hidden></div>
+<header class="top">
+  <div class="wrap bar">
+    <a class="logo" href="accueil.html"><img src="images/logo-fond-sombre.png" alt="Liberty Fitness, retour à l'accueil" width="653" height="298"></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav id="menu" aria-label="Navigation principale">
+        <a href="salle.html">La salle</a>
+        <a href="activites.html">Activités</a>
+        <a href="planning.html">Planning</a>
+        <a href="tarifs.html">Tarifs</a>
+        <a href="equipe.html">Équipe</a>
+        <a href="funparc.html">Fun Parc</a>
+        <a href="boutique.html">Boutique</a>
+        <a href="actualites.html">Actualités</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+    <a class="btn btn-lime" href="contact.html#essai">Séance d'essai gratuite</a>
+  </div>
+</header>
+<main>
+<div class="page-head">
+  <div class="stripes" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  <div class="wrap">
+    <span class="eyebrow">Contact</span>
+    <h1>Passez <em>nous voir</em></h1>
+    <p class="lead">Ouvert aux adhérents 7j/7, 365 jours par an, de 5h à minuit non-stop. L'accueil vous reçoit pour les inscriptions, les renseignements et la séance d'essai gratuite.</p>
+    <div class="status" aria-live="polite">
+      <div><i class="dot" id="dot-salle"></i><span><b id="st-salle">Salle ouverte</b> <span id="st-salle-d"></span></span></div>
+      <div><i class="dot" id="dot-accueil"></i><span><b>Accueil</b> <span id="st-accueil-d"></span></span></div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap contact-grid">
+    <img src="images/facade-drone.jpg" alt="Vue aérienne du club et de son parking, boulevard Victor Hugo" width="1400" height="786">
+    <div>
+      <div class="info">
+        <h3>Adresse</h3>
+        <p>Liberty Fitness Aumale<br>5 boulevard Victor Hugo<br>Zone industrielle, 76390 Aumale</p>
+        <p style="margin-top:8px"><strong>Parking privé gratuit</strong></p>
+      </div>
+      <div class="info">
+        <h3>Accueil et séance d'essai</h3>
+        <dl class="hours">
+          <dt>Lun–ven</dt><dd>9h30–13h30 · 17h00–19h30</dd>
+          <dt>Samedi</dt><dd>9h30–12h30</dd>
+          <dt>Dimanche</dt><dd>pas d'accueil</dd>
+        </dl>
+      </div>
+    </div>
+    <div>
+      <div class="info">
+        <h3>Téléphone</h3>
+        <a class="tel" href="tel:+33235170427">02 35 17 04 27</a>
+        <p>liberty.fitness@orange.fr<br>Facebook et Messenger : libertyfitness76<br>Fun Parc et structures : 06 12 32 05 34</p>
+      </div>
+      <div class="info">
+        <h3>Coaching cardio et musculation</h3>
+        <dl class="hours">
+          <dt>Lundi</dt><dd>14h00–19h30</dd>
+          <dt>Mardi</dt><dd>13h00–19h30</dd>
+          <dt>Mercredi</dt><dd>9h30–14h30</dd>
+          <dt>Jeudi</dt><dd>13h00–19h30</dd>
+          <dt>Vendredi</dt><dd>9h30–12h00 · 14h00–16h00</dd>
+          <dt>Samedi</dt><dd>9h30–12h30, un sur deux</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="head"><div><span class="eyebrow">Écrivez-nous</span><h2>Une demande ?</h2></div></div>
+    <div class="forms">
+      <form class="panel lime" id="essai" aria-labelledby="f-essai">
+        <h3 id="f-essai">Séance d'essai gratuite</h3>
+        <div class="row">
+          <label for="es-nom">Nom et prénom<input id="es-nom" name="nom" required autocomplete="name"></label>
+          <label for="es-tel">Téléphone<input id="es-tel" name="tel" type="tel" required autocomplete="tel"></label>
+        </div>
+        <label for="es-mail">E-mail<input id="es-mail" name="email" type="email" autocomplete="email"></label>
+        <div class="row">
+          <label for="es-act">Ce qui vous intéresse<select id="es-act" name="activite"><option>Musculation et cardio</option><option>Cours collectifs</option><option>Liberty Bike / RPM</option><option>Coaching personnalisé</option><option>Diététique</option><option>Je ne sais pas encore</option></select></label>
+          <label for="es-cr">Créneau préféré<select id="es-cr" name="creneau"><option>Semaine, matin</option><option>Semaine, fin d'après-midi</option><option>Samedi matin</option></select></label>
+        </div>
+        <button class="btn btn-lime" type="submit">Réserver ma séance</button>
+        <p class="sent" tabindex="-1">Demande prête. Sur le vrai site, elle partira par e-mail à l'accueil, qui vous rappellera pour fixer le jour.</p>
+      </form>
+      <form class="panel" id="contact" aria-labelledby="f-contact">
+        <h3 id="f-contact">Nous écrire</h3>
+        <div class="row">
+          <label for="ct-nom">Nom<input id="ct-nom" name="nom" required autocomplete="name"></label>
+          <label for="ct-mail">E-mail<input id="ct-mail" name="email" type="email" required autocomplete="email"></label>
+        </div>
+        <label for="ct-sujet">Sujet<select id="ct-sujet" name="sujet"><option>Renseignement</option><option>Abonnement</option><option>Boutique</option><option>Partenariat</option><option>Marché de Noël : emplacement exposant</option><option>Autre</option></select></label>
+        <label for="ct-msg">Message<textarea id="ct-msg" name="message" required></textarea></label>
+        <button class="btn btn-ghost" type="submit">Envoyer</button>
+        <p class="sent" tabindex="-1">Message prêt. Sur le vrai site, il partira à liberty.fitness@orange.fr.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <img src="images/logo-fond-sombre.png" alt="Liberty Fitness" width="653" height="298">
+        <p>5 boulevard Victor Hugo, zone industrielle<br>76390 Aumale · 02 35 17 04 27</p>
+      </div>
+      <div>
+        <h4>Le club</h4>
+        <ul><li><a href="salle.html">La salle</a></li><li><a href="activites.html">Activités</a></li><li><a href="equipe.html">L'équipe</a></li><li><a href="partenaires.html">Partenaires</a></li></ul>
+      </div>
+      <div>
+        <h4>S'inscrire</h4>
+        <ul><li><a href="tarifs.html">Tarifs</a></li><li><a href="planning.html">Planning</a></li><li><a href="contact.html#essai">Séance d'essai gratuite</a></li><li><a href="https://qrco.de/bfbxz5">Application Xplor Active</a></li></ul>
+      </div>
+      <div>
+        <h4>En famille</h4>
+        <ul><li><a href="funparc.html">Liberty Fun Parc</a></li><li><a href="funparc.html#anniversaire">Anniversaires</a></li><li><a href="funparc.html#structures">Location de structures</a></li><li><a href="actualites.html">Actualités</a></li></ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>DREAM SPORT SARL · capital 25 000 € · SIRET 841 888 498 00018 · RCS Dieppe</span>
+      <span>Mentions légales · Confidentialité · Cookies · Facebook : libertyfitness76</span>
+      <span>Maquette : les formulaires n'envoient rien · <a href="gestion.html">Espace gestion (démo)</a></span>
+    </div>
+  </div>
+</footer>
+<script src="site.js"></script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Liberty Fitness Aumale</title>
+<meta name="description" content="Salle de sport à Aumale ouverte de 5h à minuit, 7j/7 : musculation, cardio, cours collectifs, diététique et Liberty Fun Parc.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900;1,62..125,400..900&family=Barlow:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="bandeau" class="bandeau" role="status" hidden></div>
+<header class="top">
+  <div class="wrap bar">
+    <a class="logo" href="accueil.html"><img src="images/logo-fond-sombre.png" alt="Liberty Fitness, retour à l'accueil" width="653" height="298"></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav id="menu" aria-label="Navigation principale">
+        <a href="salle.html">La salle</a>
+        <a href="activites.html">Activités</a>
+        <a href="planning.html">Planning</a>
+        <a href="tarifs.html">Tarifs</a>
+        <a href="equipe.html">Équipe</a>
+        <a href="funparc.html">Fun Parc</a>
+        <a href="boutique.html">Boutique</a>
+        <a href="actualites.html">Actualités</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <a class="btn btn-lime" href="contact.html#essai">Séance d'essai gratuite</a>
+  </div>
+</header>
+<main>
+<div class="hero">
+  <div class="stripes" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  <div class="wrap">
+    <div>
+      <h1>De 5h à minuit.<em>7 jours sur 7.</em></h1>
+      <p class="lead">Musculation, cardio-training, cours collectifs et suivi diététique, à Aumale. Un programme personnalisé offert à chaque inscription, des coachs diplômés pour vous suivre.</p>
+      <div class="ctas">
+        <a class="btn btn-lime" href="contact.html#essai">Réserver ma séance d'essai</a>
+        <a class="btn btn-ghost" href="tarifs.html">Voir les tarifs</a>
+      </div>
+      <div class="status" aria-live="polite">
+        <div><i class="dot" id="dot-salle"></i><span><b id="st-salle">Salle ouverte</b> <span id="st-salle-d">pour les adhérents</span></span></div>
+        <div><i class="dot" id="dot-accueil"></i><span><b>Accueil</b> <span id="st-accueil-d"></span></span></div>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="images/hero-salle.jpg" alt="Le plateau cardio et musculation de Liberty Fitness, murs noirs à rayures vertes et roses" width="1600" height="1200">
+      <div class="badge-365">365 jours<small>par an, non-stop</small></div>
+    </div>
+  </div>
+</div>
+
+<div class="facts">
+  <div class="wrap">
+    <div><b>700 m²</b>d'espaces d'entraînement</div>
+    <div><b>19 h / jour</b>d'ouverture non-stop</div>
+    <div><b>25 vélos</b>pour le Liberty Bike et le RPM</div>
+    <div><b>Gratuit</b>parking privé, douches et casiers</div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <div><span class="eyebrow">Bienvenue</span><h2>Par où commencer ?</h2></div>
+    </div>
+    <div class="doors">
+      <article class="door">
+        <span class="tag">Vous voulez vous entraîner</span>
+        <h3>La salle</h3>
+        <p>Débutant ou confirmé, on vous prépare un programme adapté à vos objectifs.</p>
+        <ul class="ticks"><li>Plateau musculation</li><li>Espace cardio-training</li><li>Cours collectifs adultes</li><li>Suivi diététique sur place</li></ul>
+        <a class="link" href="salle.html">Découvrir la salle</a>
+      </article>
+      <article class="door kids">
+        <span class="tag">Pour les enfants</span>
+        <h3>Liberty Fun Parc</h3>
+        <p>Structures gonflables, jeux et anniversaires clé en main, juste à côté de la salle.</p>
+        <ul class="ticks"><li>Anniversaires privatifs</li><li>Cours Multi Kids</li><li>Location de structures gonflables</li></ul>
+        <a class="link pink" href="funparc.html">Découvrir le Fun Parc</a>
+      </article>
+      <article class="door">
+        <span class="tag">Déjà adhérent</span>
+        <h3>Votre espace</h3>
+        <p>Planning, réservations et abonnement se gèrent dans l'application du club.</p>
+        <ul class="ticks"><li>Réserver un cours ou un vélo</li><li>Gérer votre abonnement</li><li>Bilan corporel eBIODY</li></ul>
+        <a class="link" href="https://qrco.de/bfbxz5">Ouvrir l'application Xplor Active</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="eyebrow">La salle</span><h2>700 m² pour vous dépenser</h2></div>
+      <a class="link" href="salle.html">Visiter la salle</a>
+    </div>
+    <div class="gallery">
+      <figure><img src="images/salle-plateau.jpg" alt="Vue d'ensemble du plateau" width="960" height="720" loading="lazy"><figcaption>Plateau musculation</figcaption></figure>
+      <figure><img src="images/salle-cardio.jpg" alt="Vélos et elliptiques de l'espace cardio" width="960" height="720" loading="lazy"><figcaption>Cardio-training</figcaption></figure>
+      <figure><img src="images/salle-halteres.jpg" alt="Râtelier d'haltères et bancs" width="960" height="720" loading="lazy"><figcaption>Poids libres</figcaption></figure>
+      <figure><img src="images/salle-cours.jpg" alt="La salle des cours collectifs" width="960" height="720" loading="lazy"><figcaption>Salle de cours</figcaption></figure>
+      <figure><img src="images/salle-machines.jpg" alt="Machines guidées et espace fonctionnel" width="960" height="720" loading="lazy"><figcaption>Machines guidées</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <div><span class="eyebrow">Cours collectifs</span><h2 id="cours-du-jour-titre">Aujourd'hui au club</h2></div>
+      <a class="link" href="planning.html">Tout le planning</a>
+    </div>
+    <div id="cours-du-jour" class="pl-jour"></div>
+    <p class="note">Plateau musculation et cardio en accès libre de 5h à minuit. Réservez vos cours dans l'application Xplor Active.</p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="eyebrow">Tarifs</span><h2>Accès illimité dès 28 € par mois</h2></div>
+      <a class="link" href="tarifs.html">Toutes les formules</a>
+    </div>
+    <div class="prices">
+      <div class="price main"><span class="name">Annuel illimité</span><span class="amount">35 €<small> / mois</small></span><span class="detail">420 € l'année · musculation, cardio et cours collectifs</span></div>
+      <div class="price"><span class="name">Étudiant, sans emploi, retraité</span><span class="amount">28 €<small> / mois</small></span><span class="detail">336 € l'année, sur justificatif</span></div>
+      <div class="price"><span class="name">Famille, dès 2 personnes</span><span class="amount">33 €<small> / mois</small></span><span class="detail">par personne · 396 € l'année</span></div>
+      <div class="price"><span class="name">Week-end</span><span class="amount">18 €<small> / mois</small></span><span class="detail">samedi et dimanche, de 5h à minuit</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <div><span class="eyebrow pink">Liberty Fun Parc</span><h2>Le coin des enfants</h2></div>
+      <a class="link pink" href="funparc.html">Tout le Fun Parc</a>
+    </div>
+    <div class="offers">
+      <div class="offer">
+        <div class="txt">
+          <h3>Anniversaire privatif</h3>
+          <span class="big">15,90 €<small> par enfant, tout compris</small></span>
+          <p>Les mercredis et samedis, de 14h à 17h. On s'occupe de tout, vous profitez.</p>
+          <a class="btn btn-pink" href="funparc.html#anniversaire">Réserver un anniversaire</a>
+        </div>
+        <img src="images/funparc-anniversaire.jpg" alt="Affiche des anniversaires au Liberty Fun Parc" width="600" height="900" loading="lazy">
+      </div>
+      <div class="offer">
+        <div class="txt">
+          <h3>Location de structures</h3>
+          <span class="big">Devis gratuit</span>
+          <p>Anniversaire, kermesse, fête communale ou séminaire : des structures aux normes, pour tous les âges.</p>
+          <a class="btn btn-pink" href="funparc.html#structures">Demander un devis</a>
+        </div>
+        <img src="images/funparc-structures.jpg" alt="Affiche de la location de structures gonflables" width="600" height="900" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="eyebrow">Actualités</span><h2>Quoi de neuf au club ?</h2></div>
+      <a class="link" href="actualites.html">Toutes les actualités</a>
+    </div>
+    <div class="news">
+      <a class="card" href="actualites.html#sac-mystere" data-start="2026-10-05" data-end="2026-10-17">
+        <img src="images/actu-sac-mystere.jpg" alt="Affiche du sac mystère" width="600" height="900" loading="lazy">
+        <div class="when"><b>5–17 oct.</b><span>À venir</span></div>
+        <div class="body"><h3>Le sac mystère</h3><p>40 € le sac, pour plus de 100 € de surprises : textile, diététique, accessoires, et peut-être un abonnement.</p></div>
+      </a>
+      <a class="card" href="actualites.html#marche-noel" data-start="2026-12-19" data-end="2026-12-19">
+        <img src="images/actu-marche-noel.jpg" alt="Affiche du marché de Noël" width="679" height="900" loading="lazy">
+        <div class="when"><b>Sam. 19 déc.</b><span>À venir</span></div>
+        <div class="body"><h3>Marché de Noël</h3><p>De 9h à 18h, à la salle. Entrée gratuite. Artisans et commerçants : l'emplacement est offert.</p></div>
+      </a>
+      <a class="card" href="actualites.html#zumba" data-start="2026-08-31" data-end="2027-06-30">
+        <img src="images/actu-zumba.jpg" alt="Affiche de la Zumba officielle" width="600" height="900" loading="lazy">
+        <div class="when"><b>Le lundi</b><span>À venir</span></div>
+        <div class="body"><h3>Zumba® officielle</h3><p>Tous les lundis de 19h15 à 20h15 avec Lily. Débutants bienvenus.</p></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="wrap">
+    <h2>La première séance est offerte</h2>
+    <a class="btn" href="contact.html#essai">Réserver ma séance d'essai</a>
+  </div>
+</div>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <img src="images/logo-fond-sombre.png" alt="Liberty Fitness" width="653" height="298">
+        <p>5 boulevard Victor Hugo, zone industrielle<br>76390 Aumale · 02 35 17 04 27</p>
+      </div>
+      <div>
+        <h4>Le club</h4>
+        <ul><li><a href="salle.html">La salle</a></li><li><a href="activites.html">Activités</a></li><li><a href="equipe.html">L'équipe</a></li><li><a href="partenaires.html">Partenaires</a></li></ul>
+      </div>
+      <div>
+        <h4>S'inscrire</h4>
+        <ul><li><a href="tarifs.html">Tarifs</a></li><li><a href="planning.html">Planning</a></li><li><a href="contact.html#essai">Séance d'essai gratuite</a></li><li><a href="https://qrco.de/bfbxz5">Application Xplor Active</a></li></ul>
+      </div>
+      <div>
+        <h4>En famille</h4>
+        <ul><li><a href="funparc.html">Liberty Fun Parc</a></li><li><a href="funparc.html#anniversaire">Anniversaires</a></li><li><a href="funparc.html#structures">Location de structures</a></li><li><a href="actualites.html">Actualités</a></li></ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>DREAM SPORT SARL · capital 25 000 € · SIRET 841 888 498 00018 · RCS Dieppe</span>
+      <span>Mentions légales · Confidentialité · Cookies · Facebook : libertyfitness76</span>
+      <span>Maquette : les formulaires n'envoient rien · <a href="gestion.html">Espace gestion (démo)</a></span>
+    </div>
+  </div>
+</footer>
+<script src="site.js"></script>
+</body>
+</html>

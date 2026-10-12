@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Espace gestion · Liberty Fitness Aumale</title>
+<meta name="description" content="Démonstration de l’administration : bandeau d’information, planning et étiquettes.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900;1,62..125,400..900&family=Barlow:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="bandeau" class="bandeau" role="status" hidden></div>
+<header class="top">
+  <div class="wrap bar">
+    <a class="logo" href="accueil.html"><img src="images/logo-fond-sombre.png" alt="Liberty Fitness, retour à l'accueil" width="653" height="298"></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav id="menu" aria-label="Navigation principale">
+        <a href="salle.html">La salle</a>
+        <a href="activites.html">Activités</a>
+        <a href="planning.html">Planning</a>
+        <a href="tarifs.html">Tarifs</a>
+        <a href="equipe.html">Équipe</a>
+        <a href="funparc.html">Fun Parc</a>
+        <a href="boutique.html">Boutique</a>
+        <a href="actualites.html">Actualités</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <a class="btn btn-lime" href="contact.html#essai">Séance d'essai gratuite</a>
+  </div>
+</header>
+<main>
+<div class="page-head">
+  <div class="wrap">
+    <span class="eyebrow">Espace gestion · démonstration</span>
+    <h1>Mettre à jour <em>le site</em></h1>
+    <p class="lead">Ce que le club pourra modifier lui-même, sans toucher à la mise en page. Dans cette maquette, les changements sont enregistrés dans votre navigateur seulement ; sur le vrai site, ils le seront dans l'administration WordPress et visibles par tous.</p>
+  </div>
+</div>
+
+<section class="gestion">
+  <div class="wrap">
+    <div class="g-tabs" role="tablist" aria-label="Rubriques à gérer">
+      <button type="button" role="tab" id="t-bandeau" aria-controls="p-bandeau" aria-selected="true">Bandeau d'information</button>
+      <button type="button" role="tab" id="t-planning" aria-controls="p-planning" aria-selected="false">Planning de la semaine</button>
+      <button type="button" role="tab" id="t-etiquettes" aria-controls="p-etiquettes" aria-selected="false">Étiquettes des cours</button>
+    </div>
+    <p id="g-statut" class="g-statut" role="status"></p>
+
+    <!-- Bandeau -->
+    <div role="tabpanel" id="p-bandeau" aria-labelledby="t-bandeau">
+      <div class="g-cols">
+        <form id="f-bandeau" class="panel">
+          <label class="g-check" for="b-actif"><input type="checkbox" id="b-actif" name="actif"> Afficher le bandeau en haut de toutes les pages</label>
+          <label for="b-type">Type de message
+            <select id="b-type" name="type">
+              <option value="info">Information (vert)</option>
+              <option value="promo">Promotion, soldes (rose)</option>
+              <option value="alerte">Fermeture exceptionnelle, alerte (orange)</option>
+            </select>
+          </label>
+          <label for="b-message">Message <span id="g-compteur" class="g-aide"></span>
+            <textarea id="b-message" name="message" maxlength="140" required placeholder="Ex. : Fermeture exceptionnelle le mercredi 11 novembre."></textarea>
+          </label>
+          <div class="row">
+            <label for="b-lientexte">Texte du lien (facultatif)<input id="b-lientexte" name="lienTexte" placeholder="En savoir plus"></label>
+            <label for="b-lien">Page visée<input id="b-lien" name="lien" list="dl-pages" placeholder="actualites.html"></label>
+          </div>
+          <datalist id="dl-pages"><option value="actualites.html"><option value="tarifs.html"><option value="planning.html"><option value="boutique.html"><option value="funparc.html"><option value="contact.html"></datalist>
+          <div class="row">
+            <label for="b-du">Afficher à partir du<input id="b-du" name="du" type="date"></label>
+            <label for="b-au">Jusqu'au (inclus)<input id="b-au" name="au" type="date"></label>
+          </div>
+          <p class="g-aide">Sans dates, le bandeau reste affiché jusqu'à ce que vous le désactiviez. Avec une date de fin, il disparaît tout seul.</p>
+          <button class="btn btn-lime" type="submit">Enregistrer le bandeau</button>
+        </form>
+        <div>
+          <h3 class="g-h">Aperçu</h3>
+          <div id="g-apercu" class="bandeau"></div>
+          <p id="g-etat" class="g-aide" style="margin-top:12px"></p>
+          <h3 class="g-h" style="margin-top:32px">Exemples</h3>
+          <ul class="ticks">
+            <li>Fermeture exceptionnelle le mercredi 11 novembre (férié).</li>
+            <li>Soldes à la boutique : −20 % sur les protéines jusqu'au 31 janvier.</li>
+            <li>Nouveau : Yoga Vinyasa tous les mardis, première séance offerte.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Planning -->
+    <div role="tabpanel" id="p-planning" aria-labelledby="t-planning" hidden>
+      <div class="g-semaine">
+        <button type="button" class="btn btn-ghost" id="g-prec" aria-label="Semaine précédente">←</button>
+        <div><b id="g-semaine"></b><span id="g-nb" class="g-aide"></span></div>
+        <button type="button" class="btn btn-ghost" id="g-suiv" aria-label="Semaine suivante">→</button>
+        <label for="g-date" class="g-inline">Aller à<input type="date" id="g-date"></label>
+      </div>
+      <div class="g-outils">
+        <button type="button" class="btn btn-ghost" id="g-copier">Copier la semaine précédente</button>
+        <button type="button" class="btn btn-ghost" id="g-vider">Vider la semaine</button>
+      </div>
+      <div class="g-cols">
+        <div id="g-liste" class="g-liste"></div>
+        <form id="f-cours" class="panel lime">
+          <h3 id="g-form-titre">Ajouter un cours</h3>
+          <div class="row">
+            <label for="c-jour">Jour
+              <select id="c-jour" name="jour"><option value="1">Lundi</option><option value="2">Mardi</option><option value="3">Mercredi</option><option value="4">Jeudi</option><option value="5">Vendredi</option><option value="6">Samedi</option><option value="7">Dimanche</option></select>
+            </label>
+            <label for="c-etiquette">Étiquette<select id="c-etiquette" name="etiquette"></select></label>
+          </div>
+          <div class="row">
+            <label for="c-debut">Début<input id="c-debut" name="debut" type="time" step="300" required></label>
+            <label for="c-fin">Fin<input id="c-fin" name="fin" type="time" step="300" required></label>
+          </div>
+          <label for="c-titre">Nom du cours<input id="c-titre" name="titre" list="dl-titres" required placeholder="Liberty Pilates"></label>
+          <label for="c-coach">Coach (facultatif)<input id="c-coach" name="coach" list="dl-coachs"></label>
+          <datalist id="dl-titres"></datalist><datalist id="dl-coachs"></datalist>
+          <p id="g-erreur" class="g-erreur" role="alert"></p>
+          <div class="ctas">
+            <button class="btn btn-lime" type="submit" id="g-submit">Ajouter au planning</button>
+            <button class="btn btn-ghost" type="button" id="g-annuler" hidden>Annuler</button>
+          </div>
+          <p class="g-aide">Voir le résultat : <a class="link" href="planning.html">page Planning</a></p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Étiquettes -->
+    <div role="tabpanel" id="p-etiquettes" aria-labelledby="t-etiquettes" hidden>
+      <p class="g-aide" style="margin-bottom:18px">Une étiquette regroupe des cours de même famille et leur donne une couleur sur le planning. Les visiteurs peuvent filtrer le planning par étiquette. Modifiez un nom ou une couleur : tout le planning suit.</p>
+      <ul id="g-etiquettes" class="g-etiquettes"></ul>
+      <form id="f-etiquette" class="panel g-new">
+        <h3>Créer une étiquette</h3>
+        <div class="g-new-row">
+          <label for="e-couleur">Couleur<input type="color" id="e-couleur" name="couleur" value="#a5f906"></label>
+          <label for="e-nom">Nom<input id="e-nom" name="nom" required placeholder="Ex. : Boxe fitness"></label>
+          <label for="e-desc">Description<input id="e-desc" name="description" placeholder="Cardio, défoulement"></label>
+          <button class="btn btn-lime" type="submit">Créer</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="g-pied">
+      <button type="button" class="btn btn-ghost" id="g-reset">Réinitialiser la démo</button>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <img src="images/logo-fond-sombre.png" alt="Liberty Fitness" width="653" height="298">
+        <p>5 boulevard Victor Hugo, zone industrielle<br>76390 Aumale · 02 35 17 04 27</p>
+      </div>
+      <div>
+        <h4>Le club</h4>
+        <ul><li><a href="salle.html">La salle</a></li><li><a href="activites.html">Activités</a></li><li><a href="equipe.html">L'équipe</a></li><li><a href="partenaires.html">Partenaires</a></li></ul>
+      </div>
+      <div>
+        <h4>S'inscrire</h4>
+        <ul><li><a href="tarifs.html">Tarifs</a></li><li><a href="planning.html">Planning</a></li><li><a href="contact.html#essai">Séance d'essai gratuite</a></li><li><a href="https://qrco.de/bfbxz5">Application Xplor Active</a></li></ul>
+      </div>
+      <div>
+        <h4>En famille</h4>
+        <ul><li><a href="funparc.html">Liberty Fun Parc</a></li><li><a href="funparc.html#anniversaire">Anniversaires</a></li><li><a href="funparc.html#structures">Location de structures</a></li><li><a href="actualites.html">Actualités</a></li></ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>DREAM SPORT SARL · capital 25 000 € · SIRET 841 888 498 00018 · RCS Dieppe</span>
+      <span>Mentions légales · Confidentialité · Cookies · Facebook : libertyfitness76</span>
+      <span>Maquette : les formulaires n'envoient rien · <a href="gestion.html">Espace gestion (démo)</a></span>
+    </div>
+  </div>
+</footer>
+<script src="site.js"></script>
+<script src="gestion.js"></script>
+</body>
+</html>
