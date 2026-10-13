@@ -108,7 +108,7 @@ section { padding-block: 72px; }
 .dot.on { background: var(--lime); box-shadow: 0 0 0 4px rgb(165 249 6 / .2); }
 .status span span { color: var(--muted); }
 .hero-photo { position: relative; }
-.hero-photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--r); }
+.hero-photo img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--r); }
 .badge-365 { position: absolute; top: 20px; left: -14px; background: var(--lime); color: var(--on-lime); padding: 14px 20px 12px; font-family: var(--display); font-style: italic; font-stretch: 66%; font-weight: 900; text-transform: uppercase; line-height: .9; font-size: 1.6rem; transform: rotate(-3deg); border-radius: var(--r); }
 .badge-365 small { display: block; font-size: .8rem; font-style: normal; font-stretch: 100%; font-weight: 600; letter-spacing: .08em; }
 @media (max-width: 860px) { .badge-365 { left: 12px; } }
@@ -124,13 +124,13 @@ section { padding-block: 72px; }
 .gallery { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: repeat(2, 1fr); gap: 12px; }
 .gallery figure { margin: 0; position: relative; overflow: hidden; border-radius: var(--r); }
 .gallery figure:first-child { grid-row: span 2; }
-.gallery img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4 / 3; }
+.gallery img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 3 / 2; }
 .gallery figure:first-child img { aspect-ratio: auto; }
 figcaption { position: absolute; left: 10px; bottom: 10px; background: rgb(10 11 9 / .8); padding: 5px 10px; border-radius: 4px; font-size: .82rem; font-weight: 600; }
-@media (max-width: 700px) { .gallery { grid-template-columns: 1fr 1fr; grid-template-rows: none; } .gallery figure:first-child { grid-column: span 2; grid-row: auto; } .gallery figure:first-child img { aspect-ratio: 4 / 3; } }
+@media (max-width: 700px) { .gallery { grid-template-columns: 1fr 1fr; grid-template-rows: none; } .gallery figure:first-child { grid-column: span 2; grid-row: auto; } .gallery figure:first-child img { aspect-ratio: 3 / 2; } }
 .photos { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
 .photos figure { margin: 0; position: relative; overflow: hidden; border-radius: var(--r); }
-.photos img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .3s; }
+.photos img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; transition: transform .3s; }
 .photos figure:hover img { transform: scale(1.03); }
 
 /* Cartes, portes, listes */
@@ -150,7 +150,7 @@ figcaption { position: absolute; left: 10px; bottom: 10px; background: rgb(10 11
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
 .split.rev > :first-child { order: 2; }
 @media (max-width: 860px) { .split { grid-template-columns: 1fr; gap: 28px; } .split.rev > :first-child { order: 0; } }
-.split img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--r); }
+.split img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--r); }
 .split .txt { display: grid; gap: 16px; align-content: start; }
 .split .txt p { color: var(--muted); }
 .disclaimer { font-size: .8rem; color: var(--muted); margin-top: 8px; }
